@@ -3,7 +3,7 @@ local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
 local TweenService = game:GetService('TweenService')
 local UserInputService = game:GetService("UserInputService")
-local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/MufabaScripts/Ui/main/Notification.lua"))()
+local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/x9PSwiftz/Panda/main/Notification.lua"))()
 
 --intro
 
