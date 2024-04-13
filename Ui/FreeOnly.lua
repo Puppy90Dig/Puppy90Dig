@@ -86,7 +86,7 @@ local Service
   LibVersion = Options.LibVersion
 local LibType = "roblox" -- Available ( FiveM or Roblox ) always use small letter
   
-  local PandaAuth = loadstring(game:HttpGet('https://pandadevelopment.cloud/servicelib?service='..Service..'&core='..LibType..'&param='..LibVersion))()
+  local PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/Panda-Repositories/PandaKS_Libraries/main/library/LuaLib/ROBLOX/PandaBetaLib.lua'))()
   
   -- [ PandaSecurity ] --
   local functions = {print,warn,error,writefile,makefolder,rconsoleprint,setclipboard,rconsoleerr,rconsolewarn}
