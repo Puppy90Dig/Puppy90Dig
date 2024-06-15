@@ -111,29 +111,4 @@ local InterfaceManager = {} do
     end
 end
 
--- Close/Open Ui
-    
-    local gui = Instance.new("ScreenGui")
-    gui.Name = "ProjectVMAX"
-    gui.Parent = game.CoreGui
-    
-    local ImageButton = Instance.new("ImageButton")
-    ImageButton.Name = "ToggleUiVmax"
-    ImageButton.Image = "rbxassetid://17867680150"
-    ImageButton.BackgroundTransparency = 1
-    ImageButton.Size = UDim2.new(0, 50, 0, 50)
-    ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
-    ImageButton.Parent = gui
-    ImageButton.Draggable = true
-    
-    local isOpen = true
-    ImageButton.MouseButton1Click:Connect(function()
-        isOpen = not isOpen
-        if isOpen then
-            Window:Minimize()
-        else
-            Window:Minimize()
-        end
-   end)
-
 return InterfaceManager
