@@ -474,7 +474,7 @@ local ColorTen = Color3.fromRGB(138, 10, 10)
   -- [ Main Functions ] --
   if SaveKey and isfile(Name..".txt") then
     Object.KeyBox.Text = readfile(Name..".txt")
-    Notify.New("["..Name.."]: Loaded Saved Key", 5)
+    Notify.New("["..Name.."]: Loaded Saved Key", 2)
   end
 	
   local SavedKey = isfile(Name .. ".txt")
@@ -493,8 +493,8 @@ local ColorTen = Color3.fromRGB(138, 10, 10)
         while true do end
       elseif PandaAuth:ValidatePremiumKey(Service, Object.KeyBox.Text) then
         print("[ " .. Name .. " ]" .. " Correct Key")
-        Notify.New("[" .. Name .. "]: Correct Key", 5)
-        Notify.New("Executor: [" .. identifyexecutor() .. "]", 5)
+        Notify.New("[" .. Name .. "]: Correct Key", 2)
+        Notify.New("Executor: [" .. identifyexecutor() .. "]", 2)
         SyncUI:SaveKey(Name .. ".txt", Object.KeyBox.Text)
         Callback()
         RemoveUI()
