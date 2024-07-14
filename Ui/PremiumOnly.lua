@@ -7,10 +7,10 @@ local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/x9PSwi
 
 --intro
 
-Notify.New("Premium | Key System", 4)
-wait(1)
+Notify.New("Premium | Key System", 2)
+wait(0.5)
 Notify.New("Loading...", 2)
-wait(1)
+wait(0.5)
 Notify.New("Loaded", 2)
 
 -- { Functions } --
