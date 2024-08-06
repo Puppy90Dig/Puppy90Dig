@@ -7,11 +7,11 @@ local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/x9PSwi
 
 --intro
 
-Notify.New("Premium | Key System", 2)
+Notify.New("Premium | Key System", 5)
 wait(0.5)
-Notify.New("Loading...", 2)
+Notify.New("Loading...", 5)
 wait(0.5)
-Notify.New("Loaded", 2)
+Notify.New("Loaded", 5)
 
 -- { Functions } --
 local SyncInstance = {obj = {}}
@@ -493,8 +493,8 @@ local ColorTen = Color3.fromRGB(138, 10, 10)
         while true do end
       elseif PandaAuth:ValidatePremiumKey(Service, Object.KeyBox.Text) then
         print("[ " .. Name .. " ]" .. " Correct Key")
-        Notify.New("[" .. Name .. "]: Correct Key", 2)
-        Notify.New("Executor: [" .. identifyexecutor() .. "]", 2)
+        Notify.New("[" .. Name .. "]: Correct Key", 5)
+        Notify.New("Executor: [" .. identifyexecutor() .. "]", 5)
         SyncUI:SaveKey(Name .. ".txt", Object.KeyBox.Text)
         Callback()
         RemoveUI()
