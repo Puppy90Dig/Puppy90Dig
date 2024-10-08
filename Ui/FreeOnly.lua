@@ -76,6 +76,16 @@ function SyncUI:SaveKey(name, content)
 end
 function SyncUI:Create(Options)
 
+local function RemoveUI()
+    do
+      local KeySystem = CoreGui:FindFirstChild('SyncUIxPanda')
+      if KeySystem then
+       KeySystem:Destroy()
+      end
+    end
+end
+
+	
 local Service
   -- [ Options ] --
   Service = Options.Service
