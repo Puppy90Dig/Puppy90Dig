@@ -86,68 +86,7 @@ local Service
   LibVersion = Options.LibVersion
 local LibType = "roblox" -- Available ( FiveM or Roblox ) always use small letter
   
-  local PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/luableapi/main/main/panda.lua'))()
-  
-  -- [ PandaSecurity ] --
-  local functions = {print,warn,error,writefile,makefolder,rconsoleprint,setclipboard,rconsoleerr,rconsolewarn}
-  local hell_nah = {"githubusercontent","LRHUBEDIT"}
-  local function RandomString(length)
-    local randomString = ""
-    for i = 1, length do
-      local randomNumber = math.random(97, 122)
-      randomString = randomString .. string.char(randomNumber)
-    end
-    return tostring(randomString)
-  end
-  local function CheckForSpy()
-    local core = game:GetService("CoreGui")
-    local keyword = "spy"
-    for _, v in pairs(core:GetDescendants()) do
-      if v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox") then
-        if string.find(string.lower(v.Name), string.lower(keyword)) or string.find(string.lower(v.Text), string.lower(keyword)) then
-          while true do end
-        end
-      end
-    end
-  end
-  local function RemoveUI()
-    do
-      local KeySystem = CoreGui:FindFirstChild('SyncUIxPanda')
-      if KeySystem then
-       KeySystem:Destroy()
-      end
-    end
-  end
-  for i,v in pairs(functions) do
-    local old
-    old = hookfunction(v, function(...)
-      local content = {...}
-      for i2,v2 in pairs(content) do
-        for i3,v3 in pairs(hell_nah) do
-          if string.find(string.lower(tostring(i2)),string.lower(tostring(v3))) or string.find(string.lower(tostring(v2)),string.lower(tostring(v3))) then
-            print("dumb")
-            content = " So Let's raise the bar"
-            while true do end
-              return
-            end
-        end
-      end
-      return old(...)
-    end)
-  end
-  CheckForSpy()
-  RemoveUI()
-  game:GetService("CoreGui").ChildAdded:Connect(function()
-    CheckForSpy()
-  end)
-  
-  -- [ Anti HTTP Spy ] --
-  pcall(game.HttpGet, game, setmetatable({}, {
-    __tostring = function()
-      print("Kick Player")
-      return ""
-    end,
-  }))
+local PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/luableapi/main/main/panda.lua'))()
   
 local ColorOne = Color3.fromRGB(237, 74, 74)
 local ColorTwo = Color3.fromRGB(97, 152, 255)
