@@ -4298,7 +4298,7 @@ HoverChange = 0.04
 		local L_1134_, L_1135_, L_1136_, L_1137_, L_1138_ = L_2_(50)
 		return {
 			Name = 'Dark',
-			Accent = Color3.fromRGB(96, 205, 255),
+			Accent = Color3.fromRGB(255, 81, 0),
 			AcrylicMain = Color3.fromRGB(60, 60, 60),
 			AcrylicBorder = Color3.fromRGB(90, 90, 90),
 			AcrylicGradient = ColorSequence.new(Color3.fromRGB(40, 40, 40), Color3.fromRGB(40, 40, 40)),
