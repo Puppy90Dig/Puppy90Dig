@@ -4349,7 +4349,7 @@ HoverChange = 0.04
 			ElementBorder = Color3.fromRGB(3, 0, 0),
 			InElementBorder = Color3.fromRGB(55, 55, 55),
 			ElementTransparency = 0.82,
-			DropdownFrame = Color3.fromRGB(120, 120, 120),
+			DropdownFrame = Color3.fromRGB(255, 5, 5),
 			DropdownHolder = Color3.fromRGB(3, 0, 0),
 			DropdownBorder = Color3.fromRGB(3, 0, 0),
 			Dialog = Color3.fromRGB(3, 0, 0),
@@ -4359,7 +4359,7 @@ HoverChange = 0.04
 			DialogButtonBorder = Color3.fromRGB(55, 55, 55),
 			DialogBorder = Color3.fromRGB(50, 50, 50),
 			DialogInput = Color3.fromRGB(45, 45, 45),
-			DialogInputLine = Color3.fromRGB(120, 120, 120)
+			DialogInputLine = Color3.fromRGB(255, 5, 5)
 		}
 	end,
 	[52] = function()
