@@ -1,3 +1,30 @@
+local cloneref = cloneref or function(o) return o end
+local httpService = cloneref(game:GetService('HttpService'))
+
+if copyfunction and isfolder then -- fix for mobile executors :/
+	local isfolder_, isfile_, listfiles_ = copyfunction(isfolder), copyfunction(isfile), copyfunction(listfiles);
+	local success_, error_ = pcall(function() return isfolder_(tostring(math.random(999999999, 999999999999))) end);
+
+	if success_ == false or (tostring(error_):match("not") and tostring(error_):match("found")) then
+		getgenv().isfolder = function(folder)
+			local s, data = pcall(function() return isfolder_(folder) end)
+			if s == false then return nil end
+			return data
+		end
+	
+		getgenv().isfile = function(file)
+			local s, data = pcall(function() return isfile_(file) end)
+			if s == false then return nil end
+			return data
+		end
+	
+		getgenv().listfiles = function(folder)
+			local s, data = pcall(function() return listfiles_(folder) end)
+			if s == false then return {} end
+			return data
+		end
+	end
+end
 
 local httpService = game:GetService("HttpService")
 
