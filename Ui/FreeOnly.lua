@@ -297,7 +297,7 @@ local ColorTen = Color3.fromRGB(138, 10, 10)
     Notify.New("https://discord.gg/7upiter", 3)
   end)
   Object.Login.MouseButton1Click:Connect(function()
-    Login()
+    main()
   end)
   Object.Close.MouseButton1Click:Connect(function()
     Object.SyncUI:Destroy()
@@ -415,7 +415,65 @@ local ColorTen = Color3.fromRGB(138, 10, 10)
     Size = UDim2.new(0, 409, 0, -6)
   })
   MakeDraggable(Object.Main)
-  
+
+
+local function detectExecutor()
+    local executor = "Unknown" -- if no executor Found then it will Replace it to Unknow
+
+    if syn then
+        executor = "Synapse X"
+    elseif getexecutorname then
+        executor = getexecutorname()
+    elseif is_fluxus_closure then
+        executor = "Fluxus"
+    elseif identifyexecutor then
+        executor = identifyexecutor()
+    elseif iskrnlclosure then
+        executor = "KRNL"
+    elseif isexecutorclosure then
+        executor = "Codex"
+    elseif is_delta_closure then
+        executor = "Delta"
+    end
+
+    print("[ Project V ] Found: " .. executor)
+    return executor
+end
+
+local function setupForExecutor(executor)
+    if executor == "Fluxus" then
+        print("Optimizations for Fluxus activated!")
+        Login()
+    elseif executor == "Delta" then
+        print("Delta-Support activated!")
+        Login()
+    elseif executor == "Arceus X" then
+        print("ArceusX-Support activated!")
+        Login()
+    elseif executor == "Codex" then
+        print("Codex-Support activated!")
+        Login()
+    elseif executor == "Wave" then
+        print("Wave-Support activated!")
+        Login()
+    elseif executor == "Synapse X" then
+        print("Synapse X optimizations enabled!")
+        Login()
+     else
+        print("No Executor Found")
+    end
+end
+
+local function main()
+    print("[ Project V ] Initialization...")
+
+    local executor = detectExecutor()
+
+    setupForExecutor(executor)
+    print("[ Project V ] KeySystem Loaded Successfully!")
+end
+
+	
   -- [ Main Functions ] --
   if SaveKey and isfile(Name..".txt") then
     Object.KeyBox.Text = readfile(Name..".txt")
@@ -441,7 +499,7 @@ local ColorTen = Color3.fromRGB(138, 10, 10)
     end)
   end
   if SaveKey and SavedKey then
-    Login()
+    main()
   end
 end
 
